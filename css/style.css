@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+	
+  font-size: 1.3em;
+  max-width: 1600px;
+  margin: 0 auto;
+  background-image: url("../images/background.jpg");
+  background-position:center;
+  background-repeat:no-repeat;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.column {
+	
+  margin: 5px 0;
+  flex-basis: 100%;
+  width:100%;
+  min-height:200px;
+  background-color:#bbc1cc;
+  
+}
+
+header {
+
+  flex-basis: 100%;
+  width:100%;
+  background-color:white;
+
+}
+
+#logo {
+
+  margin:0 auto;
+
+}
+
+#locatie {
+
+  max-height:110px;
+  background-color:white;
+  padding-bottom:5px;
+  padding-top:5px;
+  text-align:center;
+  width:100%;
+
+}
+
+#digitaal {
+
+  background-color:white;
+  text-align:center;
+  width:100%;
+
+}
+
+#datum {
+
+
+  background-color:white;
+  text-align:center;
+  width:100%;
+
+}
+
+h1 {
+
+  display:inline;
+  padding-top:10px;
+  padding-bottom:10px;
+
+}
+
+/* Analoge Klok */
+
+.clockbox, #clock {
+
+  background-color:transparent;
+  width:100%;
+
+}
+
+.circle {
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 9;
+  stroke-miterlimit: 10;
+
+}
+
+.mid-circle {
+
+  fill: #ffffff;
+
+}
+.hour-marks {
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 9;
+  stroke-miterlimit: 10;
+  
+}
+
+.hour-arm {
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 17;
+  stroke-miterlimit: 10;
+  
+}
+
+.minute-arm {
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 11;
+  stroke-miterlimit: 10;
+
+}
+
+.second-arm {
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+
+}
+
+.sizing-box {
+
+  fill: none;
+
+}
+
+#hour, #minute, #second {
+
+  transform-origin: 300px 300px;
+  transition: transform .5s ease-in-out;
+
+}
+
+/* Mobiel */
+
+@media screen and (min-width: 360px) and (max-width:719px) {
+	
+  .row {
+	  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    
+  }
+  
+  .column {
+	  
+    flex: 1;
+	
+  } 
+
+  #digitaal {
+
+    min-height:85px;
+    font-size:2.5em;
+    display:inline;
+
+  }
+  #datum {
+
+    padding-top:2px;
+    font-size:1em;
+    display:inline;
+
+  }
+
+  #locatie{
+
+    font-size:1.5em;
+  
+  }
+
+  svg {
+
+    max-height:375px;
+  }
+
+
+}
+
+/* Tablet */
+
+@media screen and (min-width: 720px) and (max-width: 1365px){
+	
+  .row {
+	  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+  }
+  
+  .column {
+	  
+    flex: 1;
+    height:250px;
+    padding:5px;
+    margin:5px;
+    height:auto;
+	
+  }
+
+  svg {
+
+    max-height:600px;
+    min-width:720px;
+
+  }
+
+  #datum {
+
+    min-height:75px;
+    font-size:3em;
+
+  }
+
+  #digitaal {
+
+    min-height:120px;
+    font-size:4.5em;
+
+  }
+
+  #locatie {
+
+    height:110px;
+    font-size:2em;
+
+  }
+
+}
+
+/* Laptop */
+
+@media screen and (min-width: 1366px) and (max-width: 1600px) {
+
+  body {
+
+    max-width:1200px;
+    overflow:hidden;
+
+  }
+	
+  .row {
+	  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+  }
+  
+  .column {
+	  
+    flex: 1;
+    height:250px;
+    padding:5px;
+    margin:5px;
+    height:auto;
+	
+  }
+
+  #locatie {
+
+    font-size:2em;
+
+  }
+
+  #datum {
+
+    font-size:3em;
+
+  }
+
+  #digitaal {
+
+    font-size:4em;
+    max-height:100px;
+
+  }
+
+  svg {
+
+    max-height:400px;
+
+  }
+
+}
+
+/* Desktop */
+
+@media screen and (min-width: 1600px) {
+
+  #locatie {
+
+    font-size:2em;
+
+  }
+
+  #datum {
+
+    font-size:4.5em;
+
+  }
+
+  #digitaal {
+
+    font-size:5em;
+
+  }
+
+}
